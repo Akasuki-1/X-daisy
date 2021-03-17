@@ -67,8 +67,6 @@ PM_START_TEXT = """
 Hello there, I'm a big fan of Kiccha Sudeep [,](https://telegra.ph/file/4f2039d807a346f6baf69.jpg) so my name is *kicchafan*.
 
 I am the group management bot of Kannada Movies  .. You guys can't use me or add me to groups.....
-
-✪ Make sure you read *INFO* Section Below ✪ 
 """
 
 buttons = [
