@@ -368,7 +368,7 @@ def mareek_about_callback(update, context):
             f"\n\n✅ 𝗼𝗻𝗹𝘆 𝗞𝗮𝗻𝗻𝗮𝗱𝗮 𝗠𝗼𝘃𝗶𝗲𝘀 𝗖𝗮𝗻 𝗕𝗲 𝗥𝗲𝗾𝘂𝗲𝘀𝘁𝗲𝗱 𝗛𝗲𝗿𝗲..."
             f"\n\n❌ 𝗢𝘁𝗵𝗲𝗿 𝗟𝗮𝗻𝗴𝘂𝗮𝗴𝗲 𝗠𝗼𝘃𝗶𝗲𝘀 𝗡𝗼𝘁 𝗔𝗹𝗹𝗼𝘄𝗲𝗱..."
             f"\n\n✅ 𝗦𝗵𝗮𝗿𝗲 𝗔𝗻𝗱 𝗦𝘂𝗽𝗽𝗼𝗿𝘁 𝘂𝘀.",
-            parse_mode=ParseMode.MARKDOWN,
+            parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
