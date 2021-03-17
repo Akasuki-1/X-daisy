@@ -64,9 +64,9 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [Aɳɠҽʅʅα 🧚‍♀](https://telegra.ph/file/c01f0e0eb74ac8babbbbb.jpg)
+Hello there, I'm a big fan of Kiccha Sudeep , so my name is *kicchafan*.
 
-I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managing your group
+I am the group management bot of Kannada Movies  .. You guys can't use me or add me to groups.....
 
 ✪ Make sure you read *INFO* Section Below ✪ 
 """
@@ -77,6 +77,9 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="Read rules", callback_data="mareek_"),
+    ],
+    [   
+        InlineKeyboardButton(text="Add Me", url="http://t.me/Kiccha_fanbot?startgroup=true"),
     ],
     [
                         InlineKeyboardButton(
@@ -89,7 +92,7 @@ buttons = [
 ]
 
 HELP_STRINGS = f"""
-*Main Commands :* [Aɳɠҽʅʅα 🧚‍♀](https://telegra.ph/file/c01f0e0eb74ac8babbbbb.jpg)
+*Main Commands :* [Kiccha fan](https://telegra.ph/file/4f2039d807a346f6baf69.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -101,11 +104,11 @@ HELP_STRINGS = f"""
     "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n",
 )
 
-LOCAL_IMG = "https://telegra.ph/file/465456555d84c4c73b2c3.jpg"
+LOCAL_IMG = "https://telegra.ph/file/4f2039d807a346f6baf69.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer's of the Base code,
-Support them  [N](t.me/Godzilla365,[Jason](t.me/imjanindu),"""
+Support them  [N](telegram.org),"""
 
 IMPORTED = {}
 MIGRATEABLE = []
