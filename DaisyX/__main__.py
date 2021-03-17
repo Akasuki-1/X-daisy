@@ -73,15 +73,7 @@ I am an 𝐴𝑛𝑖𝑚𝑒 Themed Group Managing Bot and I will help in managi
 
 buttons = [
     [
-        InlineKeyboardButton(text="Info ⚠️", callback_data="aboutmanu_"),
-    ],
-    [
         InlineKeyboardButton(text="Help ❔", callback_data="help_back"),
-    ],
-    [
-        InlineKeyboardButton(
-            text="Add Me 💃", url="t.me/VillainProBot?startgroup=true"
-        ),
     ],
     [
         InlineKeyboardButton(text="Read rules", callback_data="mareek_"),
