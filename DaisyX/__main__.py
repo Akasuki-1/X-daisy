@@ -78,8 +78,15 @@ buttons = [
     [
         InlineKeyboardButton(text="Read rules", callback_data="mareek_"),
     ],
+    [
+                        InlineKeyboardButton(
+                            text="Group", url="t.me/pruthvi_RJ_Group"
+                        ),
+                        InlineKeyboardButton(
+                            text="Channel", url="t.me/Pruthvi_RJ_Movies"
+                        ),
+    ],
 ]
-
 
 HELP_STRINGS = f"""
 *Main Commands :* [Aɳɠҽʅʅα 🧚‍♀](https://telegra.ph/file/c01f0e0eb74ac8babbbbb.jpg)
@@ -372,6 +379,14 @@ def mareek_about_callback(update, context):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
+                 [
+                        InlineKeyboardButton(
+                            text="Group", url="t.me/pruthvi_RJ_Group"
+                        ),
+                        InlineKeyboardButton(
+                            text="Channel", url="t.me/Pruthvi_RJ_Movies"
+                        ),
+                 ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="mareek_back")
                  ]
