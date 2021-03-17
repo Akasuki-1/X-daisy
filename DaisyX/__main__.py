@@ -82,6 +82,9 @@ buttons = [
             text="Add Me 💃", url="t.me/VillainProBot?startgroup=true"
         ),
     ],
+    [
+        InlineKeyboardButton(text="Read rules", callback_data="mareek_"),
+    ],
 ]
 
 
@@ -354,6 +357,29 @@ def help_button(update, context):
         else:
             query.message.edit_text(excp.message)
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
+
+@run_async
+def mareek_about_callback(bot: Bot, update: Update):
+    query = update.callback_query
+    if query.data == "mareek_":
+        query.message.edit_text(
+            text=RULEZZ,
+            parse_mode=ParseMode.MARKDOWN,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="mareek_back")
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "mareek_back":
+        query.message.edit_text(
+            PM_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+        )
 
 
 @run_async
@@ -821,6 +847,9 @@ def main():
 
     settings_handler = CommandHandler("settings", get_settings)
     settings_callback_handler = CallbackQueryHandler(settings_button, pattern=r"stngs_")
+    
+    mareek_callback_handler = CallbackQueryHandler(mareek_about_callback, pattern=r"mareek_")
+
 
     about_callback_handler = CallbackQueryHandler(
         DaisyX_about_callback, pattern=r"aboutmanu_"
@@ -833,6 +862,7 @@ def main():
 
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
+    dispatcher.add_handler(mareek_callback_handler)
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(settings_handler)
