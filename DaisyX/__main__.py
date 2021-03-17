@@ -579,8 +579,8 @@ def get_help(update, context):
                     ],
                     [
                         InlineKeyboardButton(
-                            text="Support Chat 📢",
-                            url="https://t.me/{}".format(SUPPORT_CHAT),
+                            text="Kannada Moviez",
+                            url="https://t.me/kannada_cinema_group"
                         )
                     ],
                 ]
