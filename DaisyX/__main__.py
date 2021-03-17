@@ -64,7 +64,7 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm a big fan of Kiccha Sudeep , so my name is *kicchafan*.
+Hello there, I'm a big fan of Kiccha Sudeep [,](https://telegra.ph/file/4f2039d807a346f6baf69.jpg) so my name is *kicchafan*.
 
 I am the group management bot of Kannada Movies  .. You guys can't use me or add me to groups.....
 
@@ -222,8 +222,7 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_photo(
-                LOCAL_IMG,
+            update.effective_message.reply_text(
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
