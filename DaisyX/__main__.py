@@ -360,7 +360,7 @@ def help_button(update, context):
             LOGGER.exception("Exception in help buttons. %s", str(query.data))
 
 @run_async
-def mareek_about_callback(bot: Bot, update: Update):
+def mareek_about_callback(update, context):
     query = update.callback_query
     if query.data == "mareek_":
         query.message.edit_text(
