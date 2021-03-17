@@ -75,18 +75,19 @@ buttons = [
     [
         InlineKeyboardButton(text="Help ❔", callback_data="help_back"),
     ],
-    [
-        InlineKeyboardButton(text="Read rules", callback_data="mareek_"),
-    ],
+  
     [   
         InlineKeyboardButton(text="Add Me", url="http://t.me/Kiccha_fanbot?startgroup=true"),
     ],
     [
+        InlineKeyboardButton(text="↓Read Rules & Join group↓", callback_data="mareek_"),
+    ],
+    [
                         InlineKeyboardButton(
-                            text="Group", url="t.me/pruthvi_RJ_Group"
+                            text="Group", url="t.me/kannada_cinema_group"
                         ),
                         InlineKeyboardButton(
-                            text="Channel", url="t.me/Pruthvi_RJ_Movies"
+                            text="Channel", url="t.me/kannada_all_movis"
                         ),
     ],
 ]
@@ -221,11 +222,11 @@ def start(update: Update, context: CallbackContext):
                 IMPORTED["rules"].send_rules(update, args[0], from_pm=True)
 
         else:
-            update.effective_message.reply_text(
+            update.effective_message.reply_photo(
+                LOCAL_IMG,
                 PM_START_TEXT,
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
-                timeout=60,
             )
     else:
         update.effective_message.reply_text(
@@ -366,10 +367,10 @@ def mareek_about_callback(update, context):
     query = update.callback_query
     if query.data == "mareek_":
         query.message.edit_text(
-            text=f"❇️𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 @𝗣𝗿𝘂𝘁𝗵𝘃𝗶_𝗥𝗝_𝗚𝗿𝗼𝘂𝗽 "
-            f"\n\n❇️𝗧𝗵𝗲 𝗥𝘂𝗹𝗲𝘀 @𝗣𝗿𝘂𝘁𝗵𝘃𝗶_𝗥𝗝_𝗚𝗿𝗼𝘂𝗽  𝗚𝗶𝘃𝗲𝗻 𝗕𝗲𝗹𝗼𝘄"
+            text=f"❇️𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝗧𝗼 @kannada_cinema_group "
+            f"\n\n❇️𝗧𝗵𝗲 𝗥𝘂𝗹𝗲𝘀 @kannada_cinema_group  𝗚𝗶𝘃𝗲𝗻 𝗕𝗲𝗹𝗼𝘄"
             f"\n\n𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗙𝗼𝗿𝗺𝗮𝘁 #𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗠𝗼𝘃𝗶𝗲_𝗡𝗮𝗺𝗲"
-            f"\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲 _#𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗞𝗶𝗿𝗶𝗸 𝗽𝗮𝗿𝘁𝘆_"
+            f"\n\n𝗘𝘅𝗮𝗺𝗽𝗹𝗲 `#𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗞𝗶𝗿𝗶𝗸 𝗽𝗮𝗿𝘁𝘆`"
             f"\n\n👆👆𝗬𝗼𝘂 𝗦𝗵𝗼𝘂𝗹𝗱 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗬𝗼𝘂𝗿 𝗠𝗼𝘃𝗶𝗲𝘀 𝗹𝗶𝗸𝗲 𝘁𝗵𝗶𝘀"
             f"\n\n🚫 𝗱𝗼𝗻'𝘁 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗦𝘁𝗶𝗹𝗹 𝗡𝗼𝘁 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝗱 𝗠𝗼𝘃𝗶𝗲𝘀 𝗮𝗻𝗱 𝗗𝗶𝗴𝗶𝘁𝗮𝗹𝗹𝘆 𝗡𝗼𝘁 𝗥𝗲𝗹𝗲𝗮𝘀𝗲𝗱 𝗠𝗼𝘃𝗶𝗲𝘀.."
             f"\n\n🚫 𝗗𝗼𝗻'𝘁 𝗦𝗽𝗮𝗺 𝗛𝗲𝗿𝗲.."
@@ -409,10 +410,10 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"* Hi again!  The name's {dispatcher.bot.first_name}  \n\nAs  You I'm a next generational group management bot developed by Infinity_Bots.* "
-            f"\n\n  Join [Angella Support](https://telegra.ph/file/a192c90cb93f29ebef195.jpg) To Keep Yourself Updated About {dispatcher.bot.first_name}"
+            text=f"* Hi again!  The name's {dispatcher.bot.first_name}  \n\nAs  You I'm a next generational group management bot developed by @the_noobHacker.* "
+            f"\n\n  Join [Kannada Movies](t.me/kannada_cinema_group) To Keep Yourself Updated About new Kannada Movies..."
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
-            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/c01f0e0eb74ac8babbbbb.jpg)"
+            f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/4f2039d807a346f6baf69.jpg)"
             f"\n\n You Can Know More About Me By Clicking The Below Buttons",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
