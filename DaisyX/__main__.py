@@ -78,7 +78,7 @@ buttons = [
         InlineKeyboardButton(text="Add Me", url="http://t.me/Kiccha_fanbot?startgroup=true"),
     ],
     [
-        InlineKeyboardButton(text="↓Read Rules & Join group↓", callback_data="mareek_"),
+        InlineKeyboardButton(text="↓Join our group & channel↓", callback_data="mareek_"),
     ],
     [
                         InlineKeyboardButton(
