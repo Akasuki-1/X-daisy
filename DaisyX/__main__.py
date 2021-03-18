@@ -363,8 +363,8 @@ def help_button(update, context):
 def mareek_about_callback(update, context):
     query = update.callback_query
     if query.data == "mareek_":
-        query.message.edit_text(
-            text= "LOCAL_IMG",
+        query.message.edit_sticker(
+            LOCAL_IMG,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
