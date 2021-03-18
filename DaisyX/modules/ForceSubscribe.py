@@ -209,4 +209,4 @@ Note: /FSub is an bot of /ForceSubscribe
 🌿
  
 """
-__mod_name__ = "📢 Force Subscribe 💭"
+__mod_name__ = "ꜰᴏʀᴄᴇ ꜱᴜʙꜱᴄʀɪʙᴇ"
