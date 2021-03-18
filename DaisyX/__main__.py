@@ -384,7 +384,7 @@ def mareek_about_callback(update, context):
             ),
         )
     elif query.data == "mareek_back":
-        query.message.edit_text(
+        query.message.reply_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
@@ -415,7 +415,7 @@ def DaisyX_about_callback(update, context):
             ),
         )
     elif query.data == "aboutmanu_back":
-        query.message.edit_text(
+        query.message.reply_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
             parse_mode=ParseMode.MARKDOWN,
