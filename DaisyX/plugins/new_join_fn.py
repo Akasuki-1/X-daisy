@@ -23,3 +23,4 @@ async def new_join_f(client, message):
         )
     # delete all other messages, except for AUTH_CHANNEL
     await message.delete(revoke=True)
+
