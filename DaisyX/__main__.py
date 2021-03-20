@@ -381,12 +381,47 @@ def mareek_about_callback(update, context):
                         ),
                  ],
                  [
+                    InlineKeyboardButton(text="LBU kiccha", callback_data="kichawe_")
+                 ],
+                 [
                     InlineKeyboardButton(text="Go Back", callback_data="mareek_back")
                  ]
                 ]
             ),
         )
     elif query.data == "mareek_back":
+        query.message.reply_text(
+            PM_START_TEXT,
+            reply_markup=InlineKeyboardMarkup(buttons),
+            parse_mode=ParseMode.MARKDOWN,
+        )
+
+
+@run_async
+def kichawe_about_callback(update, context):
+    query = update.callback_query
+    if query.data == "kichawe_":
+        query.message.reply_gif(
+            LBU_SUP,
+            parse_mode=ParseMode.HTML,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup(
+                [
+                 [
+                        InlineKeyboardButton(
+                            text="Group", url="t.me/kannada_cinema_group"
+                        ),
+                        InlineKeyboardButton(
+                            text="Channel", url="t.me/kannada_all_movis"
+                        ),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Go Back", callback_data="kichawe_back")
+                 ]
+                ]
+            ),
+        )
+    elif query.data == "kichawe_back":
         query.message.reply_text(
             PM_START_TEXT,
             reply_markup=InlineKeyboardMarkup(buttons),
@@ -854,6 +889,8 @@ def main():
     
     mareek_callback_handler = CallbackQueryHandler(mareek_about_callback, pattern=r"mareek_")
 
+    kichawe_callback_handler = CallbackQueryHandler(kichawe_about_callback, pattern=r"kichawe_")
+
 
     about_callback_handler = CallbackQueryHandler(
         DaisyX_about_callback, pattern=r"aboutmanu_"
@@ -867,6 +904,7 @@ def main():
     # dispatcher.add_handler(test_handler)
     dispatcher.add_handler(start_handler)
     dispatcher.add_handler(mareek_callback_handler)
+    dispatcher.add_handler(kichawe_allback_handler)
     dispatcher.add_handler(about_callback_handler)
     dispatcher.add_handler(help_handler)
     dispatcher.add_handler(settings_handler)
