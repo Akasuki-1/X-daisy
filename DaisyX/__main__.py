@@ -106,6 +106,7 @@ HELP_STRINGS = f"""
 )
 
 LOCAL_IMG = "CAACAgEAAxkBAAIBJ2BTG6hd7bUCwfmUi9D0rZghtbgtAAJmAwACXp-YRuIzBwi_-qS2HgQ"
+LBU_SUP = "https://telegra.ph/file/3bf8288e85cc5c88c2161.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer's of the Base code,
