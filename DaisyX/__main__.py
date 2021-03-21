@@ -401,7 +401,7 @@ def mareek_about_callback(update, context):
 def kichawe_about_callback(update, context):
     query = update.callback_query
     if query.data == "kichawe_":
-        query.message.reply_gif(
+        query.message.reply_animation(
             LBU_SUP,
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
